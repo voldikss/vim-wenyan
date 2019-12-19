@@ -14,7 +14,7 @@ if exists("*GetWenyanIndent")
 endif
 
 function! s:GetPrevNonCommentLineNum( lnum )
-	let SKIP_LINES = '\v^\s*批曰。.*$'
+	let SKIP_LINES = '\v^\s*(批|疏|注)曰.*$'
 
 	let lnum = a:lnum
 	while lnum > 0
