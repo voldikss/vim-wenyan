@@ -5,6 +5,8 @@ if exists("b:current_syntax")
   finish
 endif
 
+let b:current_syntax = "wenyan"
+
 let s:cpo_save = &cpo
 set cpo&vim
 
@@ -40,8 +42,6 @@ hi def link wenyanConstantsBool        Boolean
 hi def link wenyanStringQuoted         String
 hi def link wenyanPunctuationSeparator Special
 hi def link wenyanVariablesOther       Include
-
-let b:current_syntax = "wenyan"
 
 let &cpo = s:cpo_save
 unlet s:cpo_save
