@@ -15,7 +15,7 @@ setlocal foldmethod=indent
 
 inoremap <buffer> '' 「」<Left>
 inoremap <buffer> "" 「「」」<Left><Left>
-inoremap <buffer> // 批曰。
+inoremap <buffer> // 批曰<Space>
 
 let &cpo = s:cpo_save
 unlet s:cpo_save
