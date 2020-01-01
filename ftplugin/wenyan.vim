@@ -13,8 +13,9 @@ set cpo&vim
 setlocal commentstring=批曰\ %s
 setlocal foldmethod=indent
 
-inoremap <buffer> '' 「」<Left>
-inoremap <buffer> "" 「「」」<Left><Left>
+inoremap <buffer> ' 「」<Left>
+" inoremap <buffer> " 「「」」<Left><Left>
+inoremap <buffer> " 『』<Left>
 inoremap <buffer> // 批曰<Space>
 
 let &cpo = s:cpo_save
