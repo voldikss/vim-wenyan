@@ -11,6 +11,8 @@ set cpo&vim
 
 setlocal commentstring=批曰\ %s
 setlocal foldmethod=indent
+setlocal tabstop=4
+setlocal shiftwidth=4
 
 inoremap <buffer> ' 「」<Left>
 " inoremap <buffer> " 「「」」<Left><Left>
@@ -27,12 +29,18 @@ command! -buffer -nargs=? -complete=custom,wenyan#complete#target
             \ Render call wenyan#buffer#render(<f-args>)
 command! -buffer -nargs=? -complete=custom,wenyan#complete#clean
             \ Clean call wenyan#buffer#clean(<f-args>)
+command! -buffer -nargs=? -complete=custom,wenyan#complete#example
+            \ Example call wenyan#refer#example(<f-args>)
+command! -buffer -nargs=? -complete=custom,wenyan#complete#snippet
+            \ Snippet call wenyan#refer#snippet(<f-args>)
 
 nnoremap <buffer> <F9> <Esc>:Compile<CR>
 nnoremap <buffer> <F5> <Esc>:Run<CR>
 nnoremap <buffer> <F6> <Esc>:Render<CR>
 " required comfirm <CR> to clean
 nnoremap <buffer> <S-F9> <Esc>:Clean
+nnoremap <buffer> <F3> <Esc>:Example<CR>
+nnoremap <buffer> <S-F3> <Esc>:Snippet<CR>
 
 " --------------------------------------------------------------------------------
 let &cpo = s:cpo_save
